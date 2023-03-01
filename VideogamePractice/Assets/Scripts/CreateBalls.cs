@@ -7,6 +7,7 @@ public class CreateBalls : MonoBehaviour
     // Class variable to be changed from the Unity inteface
     [SerializeField] GameObject ball;
     [SerializeField] float delay;
+    [SerializeField] float limit;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class CreateBalls : MonoBehaviour
     void DropBall()
     {
         // Generate a new random position
-        Vector3 pos = new Vector3(Random.Range(-10.0f, 10.0f), 6, 0);
+        Vector3 pos = new Vector3(Random.Range(-limit, limit), 10, 0);
         // Create a copy of the prefab
         GameObject obj = Instantiate(ball, pos, Quaternion.identity);
         // Doom the object to die in 5 seconds
