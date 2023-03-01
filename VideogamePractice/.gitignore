@@ -58,3 +58,5 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# Ignore the layout configuration for the Unity interface
+UserSettings/Layouts/default-2021.dwlt
