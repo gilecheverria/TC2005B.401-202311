@@ -12,8 +12,10 @@ public class BallIn : MonoBehaviour
     [SerializeField] Score scoreObj;
 
     // Detect two elements in contact
-    void OnTriggerEnter2D()
+    void OnTriggerEnter2D(Collider2D col)
     {
-       scoreObj.AddPoints(1); 
+        if (col.tag == "Ball") {
+            scoreObj.AddPoints(1); 
+        }
     }
 }
