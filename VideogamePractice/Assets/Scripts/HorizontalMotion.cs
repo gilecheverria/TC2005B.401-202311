@@ -27,6 +27,7 @@ public class HorizontalMotion : MonoBehaviour
             move.x = 0;
         } 
 
+        // Apply the motion, scaled for the time between frames
         transform.Translate(move * speed * Time.deltaTime);
     }
 }
