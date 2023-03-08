@@ -37,6 +37,7 @@ public class CreateBalls : MonoBehaviour
 
     public void StopBalls()
     {
+        // Stop calling the 'DropBall' function
         CancelInvoke("DropBall");
     }
 }
