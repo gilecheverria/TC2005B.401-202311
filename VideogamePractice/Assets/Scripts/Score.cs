@@ -6,7 +6,9 @@ Gilberto Echeverria
 */
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections;
 
 public class Score : MonoBehaviour
 {
@@ -39,5 +41,12 @@ public class Score : MonoBehaviour
     {
         creator.StopBalls();
         tmpObj.text += "\n\nYou Won!!";
+        StartCoroutine(ChangeScene());
+    }
+
+    IEnumerator ChangeScene()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Victory");
     }
 }

@@ -11,11 +11,19 @@ public class BallIn : MonoBehaviour
 {
     [SerializeField] Score scoreObj;
 
+    AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     // Detect two elements in contact
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "Ball") {
             scoreObj.AddPoints(1); 
+            audioSource.Play();
         }
     }
 }
