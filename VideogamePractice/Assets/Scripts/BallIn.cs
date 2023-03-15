@@ -18,7 +18,7 @@ public class BallIn : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    // Detect two elements in contact
+    // Detect two elements in contact, one of them marked as trigger, one of them marked as trigger
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "Ball") {

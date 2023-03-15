@@ -1,18 +1,22 @@
 /*
 Keep track of the points scored in the game
+The game finishes after a predefined number of points
 
 Gilberto Echeverria
 2023-03-01
 */
 
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using System.Collections;
 
 public class Score : MonoBehaviour
 {
-    [SerializeField] TMP_Text tmpObj;
+    // Reference to a text object to display the points
+    [SerializeField] TMP_Text tmpScore;
+    // Reference to a GUI objet that will be enabled when the game finishes
+    [SerializeField] GameObject victoryLabel;
     [SerializeField] int maxScore;
 
     CreateBalls creator;
@@ -29,7 +33,7 @@ public class Score : MonoBehaviour
     {
         score += amount;
         // Udate the text displayed on the screen
-        tmpObj.text = "Score: " + score;
+        tmpScore.text = "Score: " + score;
         //Debug.Log("New score: " + score);
 
         if (score == maxScore) {
@@ -40,10 +44,13 @@ public class Score : MonoBehaviour
     void Finish()
     {
         creator.StopBalls();
-        tmpObj.text += "\n\nYou Won!!";
+        // Enable a hidden object to show the victory label
+        victoryLabel.SetActive(true);
+        // Initiate a parallel process that will wait before taking an action
         StartCoroutine(ChangeScene());
     }
 
+    // Go to another scene after a set time
     IEnumerator ChangeScene()
     {
         yield return new WaitForSeconds(2f);
