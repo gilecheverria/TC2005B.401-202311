@@ -8,15 +8,15 @@ Logo for the game:
 
 ## Pending Unity topics
 
-[x] Physics
-[x] Collision detection
-[x] Basic motion
-[x] GUI text
-[x] Audio elements
-[ ] UserPrefs
-[ ] Blinking effect
-[ ] GUI buttons
-[ ] Animation system
-[ ] Web requests
-[ ] Embed into existing web page
-[ ] Get data from web page
+- [x] Physics
+- [x] Collision detection
+- [x] Basic motion
+- [x] GUI text
+- [x] Audio elements
+- [ ] UserPrefs
+- [ ] Blinking effect
+- [ ] GUI buttons
+- [ ] Animation system
+- [ ] Web requests
+- [ ] Embed into existing web page
+- [ ] Get data from web page
