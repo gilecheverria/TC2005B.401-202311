@@ -16,6 +16,7 @@ Logo for the game:
 - [ ] UserPrefs
 - [ ] Blinking effect
 - [ ] GUI buttons
+- [ ] Camera (Cinemachine)
 - [ ] Animation system
 - [ ] Web requests
 - [ ] Embed into existing web page
