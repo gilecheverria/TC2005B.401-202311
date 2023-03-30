@@ -13,11 +13,14 @@ Logo for the game:
 - [x] Basic motion
 - [x] GUI text
 - [x] Audio elements
-- [ ] UserPrefs
+- [x] UserPrefs
 - [ ] Blinking effect
+- [x] Tile maps
+- [ ] NavMesh
 - [ ] GUI buttons
 - [ ] Camera (Cinemachine)
 - [ ] Animation system
+- [ ] Particle effects
 - [ ] Web requests
 - [ ] Embed into existing web page
 - [ ] Get data from web page
