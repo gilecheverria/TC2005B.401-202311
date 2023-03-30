@@ -21,12 +21,24 @@ public class Score : MonoBehaviour
 
     CreateBalls creator;
     int score;
+    int seconds;
 
     // Start is called before the first frame update
     void Start()
     {
         creator = GetComponent<CreateBalls>();
         score = 0;
+        seconds = 0;
+    }
+
+    void Update()
+    {
+        InvokeRepeating("AddSecond", 1, 1);
+    }
+
+    void AddSecond()
+    {
+        seconds++;
     }
 
     public void AddPoints(int amount)
@@ -46,6 +58,9 @@ public class Score : MonoBehaviour
         creator.StopBalls();
         // Enable a hidden object to show the victory label
         victoryLabel.SetActive(true);
+        // Store the information about the seconds elapsed
+        PlayerPrefs.SetInt("seconds", seconds);
+
         // Initiate a parallel process that will wait before taking an action
         StartCoroutine(ChangeScene());
     }
